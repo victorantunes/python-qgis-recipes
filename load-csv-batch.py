@@ -1,16 +1,16 @@
 # Copy and paste this script directly into QGIS Python Console (Ctrl+Alt+P).
-# This script loads longitude/latitude .csv files as red line layers.
+# This script loads latitude/longitude .csv files as red line layers.
 # Lines in the file are treated as individual points.
 # The algorithm "qgis:pointstopath" converts your points to a single path.
-# EPSG:4326 is WGS-84 and should be changed to suit your dataset (https://epsg.io/).
+# EPSG:4326 is WGS-84 and should be changed to suit your dataset (https://epsg.io/)
 # Files must have a header describing the columns.
 #
 # Example input file:
 #
-# longitude,latitude
-# -15.55155125152125, -37.978509719587123
-# -15.51251251213123, -37.857192873412312
-# -15.51254151231232, -37.123897123987123
+# latitude,longitude
+# -15.55155125152125,-37.978509719587123
+# -15.51251251213123,-37.857192873412312
+# -15.51254151231232,-37.123897123987123
 
 import os, glob
 from qgis import processing
@@ -18,7 +18,7 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import QVariant
 from PyQt5.QtGui import QColor
 
-basePath = '<directory>'
+basePath = '<basepath>'
 baseUri = "file://"+basePath
 
 instance = QgsProject.instance()
