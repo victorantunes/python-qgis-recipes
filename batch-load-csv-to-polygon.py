@@ -22,7 +22,7 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import QVariant
 from PyQt5.QtGui import QColor
 
-basePath = '/cpgeo_database/20/ENP/Sismicas_3D/csv'
+basePath = '<basepath>'
 baseUri = "file://"+basePath
 
 instance = QgsProject.instance()
