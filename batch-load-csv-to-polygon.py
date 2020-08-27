@@ -1,8 +1,11 @@
 # Copy and paste this script directly into QGIS Python Console (Ctrl+Alt+P).
-# This script loads latitude/longitude .csv files as red line layers.
-# Lines in the file are treated as individual points.
-# The algorithm "qgis:pointstopath" converts your points to a single path.
-# EPSG:4326 is WGS-84 and should be changed to suit your dataset (https://epsg.io/)
+# This script loads latitude/longitude .csv files as polygons.
+# Each line in the file must have a single latitude/longitude pair.
+# Points are converted into a single path, then into a polygon.
+# Layers are loaded onto memory only.
+# Each layer is assigned a label containing the name of the file, minus the extension.
+# Labels are not toggled on by default. User must enable them manually on the QGIS GUI.
+# CRS is EPSG:4326 (WGS-84) and should be changed to suit your dataset (https://epsg.io/)
 # Files must have a header describing the columns.
 #
 # Example input file:
